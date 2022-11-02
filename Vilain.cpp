@@ -7,9 +7,10 @@ Vilain::Vilain(std::string nom, std::string nomJeu, std::string objectif) :
 Vilain::Vilain(const Vilain& vilain) : Personnage(vilain.getNom(), vilain.getTitre()),
 phraseObjectif_(vilain.phraseObjectif_){};
 
-void Vilain::afficher(std::ofstream& o) const
+void Vilain::afficher(std::ostream& o) const
 {
 	this->Personnage::afficher(o);
 
 	o << "Objectif : " << phraseObjectif_ << std::endl;
+
 }

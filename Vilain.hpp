@@ -11,7 +11,7 @@ public:
 
 	~Vilain() = default;
 
-	void afficher(std::ofstream& o) const override;
+	void afficher(std::ostream& o) const override;
 
 protected:
 	std::string phraseObjectif_;

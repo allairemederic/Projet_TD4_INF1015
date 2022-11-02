@@ -4,10 +4,10 @@ VilainHeros::VilainHeros(Vilain vilain, Heros heros) :
 	Personnage(vilain.getNom() + "-" + heros.getNom(), vilain.getTitre() + "-" + heros.getTitre()),
 	Vilain(vilain), Heros(heros)
 {
-	missionSpeciale_ = Vilain::phraseObjectif_ + "dans le monde de " + heros.getTitre();
+	missionSpeciale_ = Vilain::phraseObjectif_ + " dans le monde de " + heros.getTitre();
 }
 
-void VilainHeros::afficher(std::ofstream& o) const
+void VilainHeros::afficher(std::ostream& o) const
 {
 	this->Personnage::afficher(o);
 	this->Vilain::afficher(o);

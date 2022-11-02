@@ -8,7 +8,7 @@ public:
 	VilainHeros(Vilain vilain, Heros heros);
 	~VilainHeros() = default;
 
-	void afficher(std::ofstream& o) const override;
+	void afficher(std::ostream& o) const override;
 
 private:
 	std::string missionSpeciale_;

@@ -7,7 +7,7 @@ Heros::Heros(std::string nom, std::string nomJeu, std::string ennemi, std::vecto
 Heros::Heros(const Heros& heros) : Personnage(heros.getNom(), heros.getTitre()),
 nomEnnemi_(heros.nomEnnemi_), listeAllies_(heros.listeAllies_) {};
 
-void Heros::afficher(std::ofstream& o) const
+void Heros::afficher(std::ostream& o) const
 {
 	this->Personnage::afficher(o);
 

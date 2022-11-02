@@ -5,6 +5,6 @@
 class Affichable {
 
 public:
-	virtual void afficher(std::ofstream& o) const = 0;
-	virtual void changerCouleur(std::ofstream& o, int codeCouleur) const = 0;
+	virtual void afficher(std::ostream& o) const = 0;
+	virtual void changerCouleur(int codeCouleur) = 0;
 };

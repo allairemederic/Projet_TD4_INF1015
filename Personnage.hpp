@@ -7,8 +7,8 @@ public:
 	Personnage(std::string nom, std::string nomJeu);
 	~Personnage() = default;
 
-	void afficher(std::ofstream& o) const override;
-	void changerCouleur(std::ofstream& o, int codeCouleur) const override;
+	void afficher(std::ostream& o) const override;
+	void changerCouleur(int codeCouleur) override;
 
 	void setNom(std::string nom);
 	const std::string& getNom() const;
@@ -18,4 +18,5 @@ public:
 private:
 	std::string nomPersonnage_;
 	std::string titreParution_;
+	int couleur_;
 };

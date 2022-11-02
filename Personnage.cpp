@@ -3,15 +3,16 @@
 Personnage::Personnage(std::string nom, std::string nomJeu) :
 	nomPersonnage_(nom), titreParution_(nomJeu) {};
 
-void Personnage::afficher(std::ofstream& o) const
+void Personnage::afficher(std::ostream& o) const
 {
+	o << "\033[" << couleur_ << "m";
 	o << "Nom : " << nomPersonnage_ << std::endl;
 	o << "Parution : " << titreParution_ << std::endl;
 }
 
-void Personnage::changerCouleur(std::ofstream& o, int codeCouleur) const
+void Personnage::changerCouleur(int codeCouleur)
 {
-	o << "\033[" << codeCouleur << "m";
+	couleur_ = codeCouleur;
 }
 
 void Personnage::setNom(std::string nom)

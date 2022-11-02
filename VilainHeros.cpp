@@ -1,11 +1,17 @@
 #include "VilainHeros.hpp"
 
 VilainHeros::VilainHeros(Vilain vilain, Heros heros) :
-	Personnage(vilain.getNom() + "-" + heros.getNom())
+	Personnage(vilain.getNom() + "-" + heros.getNom(), vilain.getTitre() + "-" + heros.getTitre()),
+	Vilain(vilain), Heros(heros)
+{
+	missionSpeciale_ = Vilain::phraseObjectif_ + "dans le monde de " + heros.getTitre();
+}
 
-void Vilain::afficher(std::ofstream& o) const
+void VilainHeros::afficher(std::ofstream& o) const
 {
 	this->Personnage::afficher(o);
+	this->Vilain::afficher(o);
+	this->Heros::afficher(o);
 
-	o << "Objectif : " << phraseObjectif_ << std::endl;
+	o << "Mission spéciale : " << missionSpeciale_ << std::endl;
 }

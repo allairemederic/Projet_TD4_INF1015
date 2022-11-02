@@ -10,7 +10,6 @@ public:
 	void afficher(std::ofstream& o) const override;
 	void changerCouleur(std::ofstream& o, int codeCouleur) const override;
 
-protected:
 	void setNom(std::string nom);
 	const std::string& getNom() const;
 	void setTitre(std::string titre);

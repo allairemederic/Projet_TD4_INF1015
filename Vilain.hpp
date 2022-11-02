@@ -6,10 +6,13 @@ class Vilain : virtual public Personnage {
 
 public:
 	Vilain(std::string nom, std::string nomJeu, std::string objectif);
+
+	Vilain(const Vilain& vilain); //Constructeur de copie
+
 	~Vilain() = default;
 
 	void afficher(std::ofstream& o) const override;
 
-private:
+protected:
 	std::string phraseObjectif_;
 };

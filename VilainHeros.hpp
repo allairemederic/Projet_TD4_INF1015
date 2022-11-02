@@ -9,4 +9,7 @@ public:
 	~VilainHeros() = default;
 
 	void afficher(std::ofstream& o) const override;
+
+private:
+	std::string missionSpeciale_;
 };

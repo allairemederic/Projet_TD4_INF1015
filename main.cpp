@@ -119,7 +119,7 @@ int main()
 		cout << trait << endl;
 	}
 
-	VilainHeros vh = VilainHeros(vecVilains.at(0), vecHeros.at(0));
+	VilainHeros vh = VilainHeros(vecVilains.at(4), vecHeros.at(3));
 
 	vh.changerCouleur(95);
 	vh.afficher(cout);

@@ -14,6 +14,9 @@ public:
 	void afficher(std::ostream& o) const override;
 
 protected:
+	void afficherInfos(std::ostream& o) const;
+
+private:
 	std::string nomEnnemi_;
 	std::vector<std::string> listeAllies_;
 };

@@ -10,7 +10,11 @@ nomEnnemi_(heros.nomEnnemi_), listeAllies_(heros.listeAllies_) {};
 void Heros::afficher(std::ostream& o) const
 {
 	this->Personnage::afficher(o);
+	afficherInfos(o);
+}
 
+void Heros::afficherInfos(std::ostream& o) const
+{
 	o << "Ennemi : " << nomEnnemi_ << std::endl;
 	o << "Alliés : " << std::endl;
 

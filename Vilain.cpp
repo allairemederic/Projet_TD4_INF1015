@@ -11,6 +11,15 @@ void Vilain::afficher(std::ostream& o) const
 {
 	this->Personnage::afficher(o);
 
-	o << "Objectif : " << phraseObjectif_ << std::endl;
+	afficherInfos(o);
+}
 
+void Vilain::afficherInfos(std::ostream& o) const
+{
+	o << "Objectif : " << phraseObjectif_ << std::endl;
+}
+
+const std::string Vilain::getObjectif() const
+{
+	return phraseObjectif_;
 }

@@ -13,6 +13,11 @@ public:
 
 	void afficher(std::ostream& o) const override;
 
+	const std::string getObjectif() const;
+
 protected:
+	void afficherInfos(std::ostream& o) const;
+
+private:
 	std::string phraseObjectif_;
 };

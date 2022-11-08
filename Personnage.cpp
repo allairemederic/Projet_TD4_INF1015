@@ -15,19 +15,9 @@ void Personnage::changerCouleur(int codeCouleur)
 	couleur_ = codeCouleur;
 }
 
-void Personnage::setNom(std::string nom)
-{
-	nomPersonnage_ = nom;
-}
-
 const std::string& Personnage::getNom() const
 {
 	return nomPersonnage_;
-}
-
-void Personnage::setTitre(std::string titre)
-{
-	titreParution_ = titre;
 }
 
 const std::string& Personnage::getTitre() const

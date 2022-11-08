@@ -10,9 +10,7 @@ public:
 	void afficher(std::ostream& o) const override;
 	void changerCouleur(int codeCouleur) override;
 
-	void setNom(std::string nom);
 	const std::string& getNom() const;
-	void setTitre(std::string titre);
 	const std::string& getTitre() const;
 
 private:

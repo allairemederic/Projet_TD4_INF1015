@@ -103,6 +103,9 @@ int main()
 
 		vecPersos.push_back(&h);
 	}
+	cout << trait << endl;
+	cout << trait << endl;
+	cout << trait << endl;
 
 	for (Vilain& v : vecVilains) {
 
@@ -112,15 +115,20 @@ int main()
 
 		vecPersos.push_back(&v);
 	}
+	cout << trait << endl;
+	cout << trait << endl;
+	cout << trait << endl;
 
 	for (Personnage* p : vecPersos) {
 
 		p->afficher(cout);
 		cout << trait << endl;
 	}
+	cout << trait << endl; 
+	cout << trait << endl;
+	cout << trait << endl;
 
 	VilainHeros vh = VilainHeros(vecVilains.at(4), vecHeros.at(3));
-
 	vh.changerCouleur(95);
 	vh.afficher(cout);
 

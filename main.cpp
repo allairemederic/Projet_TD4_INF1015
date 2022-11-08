@@ -90,32 +90,32 @@ int main()
 
 	std::vector<Heros> vecHeros;
 	std::vector<Vilain> vecVilains;
-	std::vector<Personnage> vecPersos;
+	std::vector<Personnage*> vecPersos;
 
 	lectureHeros(vecHeros, fichierHeros);
 	lectureVilain(vecVilains, fichierVilains);
 
-	for (Heros h : vecHeros) {
+	for (Heros& h : vecHeros) {
 
 		h.changerCouleur(36);
 		h.afficher(cout);
 		cout << trait << endl;
 
-		vecPersos.push_back(h);
+		vecPersos.push_back(&h);
 	}
 
-	for (Vilain v : vecVilains) {
+	for (Vilain& v : vecVilains) {
 
 		v.changerCouleur(91);
 		v.afficher(cout);
 		cout << trait << endl;
 
-		vecPersos.push_back(v);
+		vecPersos.push_back(&v);
 	}
 
-	for (Personnage p : vecPersos) {
+	for (Personnage* p : vecPersos) {
 
-		p.afficher(cout);
+		p->afficher(cout);
 		cout << trait << endl;
 	}
 
